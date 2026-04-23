@@ -1,0 +1,15 @@
+{
+  "name": "claude-notifier",
+  "owner": {
+    "name": "Moustafa Abdel-Sattar",
+    "url": "https://github.com/Moustafa-abdelsattar"
+  },
+  "plugins": [
+    {
+      "name": "claude-notifier",
+      "source": "./",
+      "description": "Meme-sound notifier for 9 Claude Code hook events — cross-platform",
+      "version": "1.0.0"
+    }
+  ]
+}

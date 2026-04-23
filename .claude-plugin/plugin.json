@@ -1,0 +1,12 @@
+{
+  "name": "claude-notifier",
+  "version": "1.0.0",
+  "description": "Meme-sound notifier for Claude Code. Fires distinct sounds on prompt submit, turn-end, notifications, session boundaries, subagent completion, pre-compact, file edits, and git push. Cross-platform (macOS, Linux, Windows).",
+  "author": {
+    "name": "Moustafa Abdel-Sattar",
+    "url": "https://github.com/Moustafa-abdelsattar"
+  },
+  "repository": "https://github.com/Moustafa-abdelsattar/claude-notifier",
+  "license": "MIT",
+  "keywords": ["sound", "notification", "hooks", "soundboard", "memes", "fun", "windows", "cross-platform"]
+}
