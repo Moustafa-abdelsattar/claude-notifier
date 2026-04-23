@@ -17,7 +17,6 @@ Cross-platform: **macOS** (`afplay`), **Linux** (`paplay` / `aplay`), **Windows*
 | `SessionEnd` | Tuco "get out" | You close the session |
 | `SubagentStop` | Dexter meme | A subagent (Task/Agent tool) finishes |
 | `PreCompact` | Cat laugh | Context is about to be compacted |
-| `PreToolUse` (Edit / Write / MultiEdit) | Anime wow | Before any file edit |
 | `PostToolUse` (Bash with `git push`) | Auraa | When you push to GitHub — the moment |
 
 `faaah.mp3` also ships in `assets/` if you want to swap Rizz back to the original gag.
