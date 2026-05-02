@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh notification.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-notification.sh"
           }
         ]
       }
