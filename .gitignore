@@ -6,3 +6,8 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# User runtime config (managed by Meso /notifier UI). config.example.json is
+# the template; copy to config.json to customize sound overrides and
+# enable/disable per event.
+config.json

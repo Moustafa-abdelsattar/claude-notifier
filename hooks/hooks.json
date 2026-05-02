@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh submit.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh submit.mp3 UserPromptSubmit"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh rizz.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh rizz.mp3 Stop"
           }
         ]
       }
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh session-start.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh session-start.mp3 SessionStart"
           }
         ]
       }
@@ -50,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh session-end.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh session-end.mp3 SessionEnd"
           }
         ]
       }
@@ -61,7 +61,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh subagent-stop.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh subagent-stop.mp3 SubagentStop"
           }
         ]
       }
@@ -72,7 +72,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh pre-compact.mp3"
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh pre-compact.mp3 PreCompact"
           }
         ]
       }

@@ -1,9 +1,27 @@
 #!/bin/bash
-# play-sound.sh <filename>
+# play-sound.sh <default_sound> [<event_name>]
+#
 # Plays a sound from the plugin's assets/ directory.
 # Cross-platform: macOS (afplay), Linux (paplay/aplay), Windows (PowerShell).
+#
+# If $2 (event_name) is supplied, the script consults config.json via
+# notify-config.sh to honor user-configured enable/disable + sound override.
+# If $2 is omitted, legacy behavior: just play $1 unconditionally.
 
-SOUND_FILE="${CLAUDE_PLUGIN_ROOT}/assets/$1"
+DEFAULT_SOUND="$1"
+EVENT_NAME="$2"
+
+if [ -n "$EVENT_NAME" ]; then
+  # shellcheck disable=SC1091
+  . "${CLAUDE_PLUGIN_ROOT}/scripts/notify-config.sh"
+  notify_consult "$EVENT_NAME" "$DEFAULT_SOUND"
+  if [ "$NOTIFY_PLAY" = "0" ]; then
+    exit 0
+  fi
+  SOUND_FILE="${CLAUDE_PLUGIN_ROOT}/assets/$NOTIFY_SOUND"
+else
+  SOUND_FILE="${CLAUDE_PLUGIN_ROOT}/assets/$DEFAULT_SOUND"
+fi
 
 if [ ! -f "$SOUND_FILE" ]; then
   exit 0

@@ -57,6 +57,25 @@ The manifest at the top of `setup.sh` maps `target-filename.mp3 → myinstants-p
 ### Remove an event you don't want
 Delete that event's block from `hooks/hooks.json` and `/reload-plugins`. The `.mp3` file can stay (unused but harmless).
 
+### Toggle events on/off (or swap sounds) without editing hooks.json
+Copy `config.example.json` to `config.json` (gitignored — your file, your overrides) and edit the per-event entries:
+
+```json
+{
+  "enabled": true,                                                  // master kill switch
+  "events": {
+    "Stop":              { "enabled": false, "sound": "rizz.mp3" }, // silenced
+    "UserPromptSubmit":  { "enabled": true,  "sound": "auraa.mp3" } // sound swapped
+  }
+}
+```
+
+The player scripts (`play-sound.sh`, `play-notification.sh`, `play-on-git-push.sh`) consult `config.json` via `scripts/notify-config.sh` before firing. No `/reload-plugins` needed — changes take effect on the next hook event.
+
+Recognized event names: `UserPromptSubmit`, `Stop`, `Notification`, `NotificationLimit`, `SessionStart`, `SessionEnd`, `SubagentStop`, `PreCompact`, `GitPush`.
+
+If `node` isn't on PATH or `config.json` doesn't exist, the plugin falls back to its built-in defaults (legacy behavior).
+
 ---
 
 ## How playback works

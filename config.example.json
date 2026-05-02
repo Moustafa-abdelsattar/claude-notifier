@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy this to config.json (already gitignored) to override sound playback. Each event can be enabled/disabled independently and given a sound override (filename in assets/). The master `enabled` flag at the top is the kill switch — set false to silence everything without uninstalling the plugin.",
+  "enabled": true,
+  "events": {
+    "UserPromptSubmit":  { "enabled": true,  "sound": "submit.mp3" },
+    "Stop":              { "enabled": true,  "sound": "rizz.mp3" },
+    "Notification":      { "enabled": true,  "sound": "notification.mp3" },
+    "NotificationLimit": { "enabled": true,  "sound": "limit.mp3" },
+    "SessionStart":      { "enabled": true,  "sound": "session-start.mp3" },
+    "SessionEnd":        { "enabled": true,  "sound": "session-end.mp3" },
+    "SubagentStop":      { "enabled": true,  "sound": "subagent-stop.mp3" },
+    "PreCompact":        { "enabled": true,  "sound": "pre-compact.mp3" },
+    "GitPush":           { "enabled": true,  "sound": "auraa.mp3" }
+  }
+}

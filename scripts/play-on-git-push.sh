@@ -7,9 +7,12 @@
 #   * literal "git push" (git push origin main, etc.)
 #   * any command containing "--push" as a flag (e.g. `gh repo create --push`,
 #     `gh repo sync --push`) — so it still fires when gh CLI handles the push.
+#
+# Honors config.json overrides: if the GitPush event is disabled or has a
+# different sound, that wins. See scripts/notify-config.sh.
 
 if grep -qE '"command"\s*:\s*"[^"]*(git[[:space:]]+push|--push([[:space:]"]|$))' <<< "$(cat)"; then
-  bash "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh" auraa.mp3
+  bash "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh" auraa.mp3 GitPush
 fi
 
 exit 0
